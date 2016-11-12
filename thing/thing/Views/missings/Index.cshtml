@@ -1,0 +1,52 @@
+﻿@model IEnumerable<thing.Models.missing>
+
+@{
+    ViewBag.Title = "Missing Animals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Missing Dogs</h2>
+<p>These are the Animals in our database that are currently missing. To report a found animal please use contact number listed with posting.</p>
+<p>
+    @Html.ActionLink("Report new missing dog", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DogName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DogBreed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastKnownLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DogName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DogBreed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastKnownLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+          
+        </td>
+    </tr>
+}
+
+</table>

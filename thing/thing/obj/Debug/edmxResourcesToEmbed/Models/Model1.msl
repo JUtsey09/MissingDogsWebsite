@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MissingDogsModelStoreContainer" CdmEntityContainer="MissingDogsEntities">
+    <EntitySetMapping Name="missings">
+      <EntityTypeMapping TypeName="MissingDogsModel.missing">
+        <MappingFragment StoreEntitySet="missing">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DogName" ColumnName="DogName" />
+          <ScalarProperty Name="DogBreed" ColumnName="DogBreed" />
+          <ScalarProperty Name="LastKnownLocation" ColumnName="LastKnownLocation" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

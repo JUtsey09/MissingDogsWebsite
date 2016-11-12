@@ -1,0 +1,51 @@
+﻿@model thing.Models.missing
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>missing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DogName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogBreed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogBreed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastKnownLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastKnownLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
